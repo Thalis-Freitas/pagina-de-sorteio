@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/icons8-trevo-32.png">
+    <title>Página para sorteio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="container">
+        <h1>Escolha uma opção de sorteio</h1>
+
+        <div id="areaOpções">    
+            <button class="opções" id="opNumeros" onclick="opNumeros()">Sorteio com números</button>
+            <button class="opções" id="opNomes" onclick="opNomes()">Sorteio com nomes</button>
+        </div>
+        <div id="areaSorteio">
+            <div id="sorteioNumeros">
+                <input class="campoSorteio" type="number" id="numerosParaSorteio"
+                    placeholder="Insira o número máximo... ">
+                <button class="botoesSortearLimpar" id="btnSortearNumeros" onclick="sortearNumeros()">Sortear</button>
+                <button class="botoesSortearLimpar" id="btnLimpar" onclick="limparNumeros()"> Limpar</button>
+                <div class="exibeResultado" id="exibeResultadoNumeros"> <h3>Números sorteados: </h3> </div>
+            </div>
+
+            <div id="sorteioNomes">
+                <input class="campoSorteio" type="text" id="nomesParaSorteio" placeholder="Digite os nomes...">
+                <button id="btnAdd" onclick="adicionarNome()"></button>
+                <button class="botoesSortearLimpar" id="btnSortearNomes" onclick="sortearNomes()">Sortear</button>
+                <button class="botoesSortearLimpar" id="btnLimparNomes" onclick="limparNomes()"> Limpar</button>
+                <div class="exibeResultado" id="exibeResultadoNomes"> <h3>Nomes sorteados:</h3></div>
+            </div>
+        </div>
+    </div>
+
+    <footer><a href="https://github.com/Thalis-Freitas" target="_blank"><img src="./img/icons8-github-24.png" alt="">
+            <p> Desenvolvido por: <span>Thalis Freitas </span>
+        </a></p>
+    </footer>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

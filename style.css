@@ -1,0 +1,193 @@
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        box-sizing: border-box;
+    }
+
+    body {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        background-image: linear-gradient(to right, #f1e96b, #FF5563);
+    }
+
+    #container {
+        position: absolute;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70%;
+        top: 10%;
+        padding: 20px;
+        border: 2px solid #f1e96b;
+        border-radius: 15px;
+        bottom: 30%;
+    }
+
+        h1 {
+            padding: 5px;
+            text-align: center;
+            color: #fcf598;
+            text-shadow: 3px 3px 6px black;
+            font-weight: 800;
+            margin: auto;
+        }
+
+        #areaOpções {
+            width: 90%;
+            margin: auto;
+            padding: 15px 0;
+            text-align: center;
+
+        }
+
+            .opções {
+                border-color: #fc7965;
+                margin: 15px;
+                padding: 12px;
+                border-radius: 15px;
+                background-color: #fc7965;
+                font-size: 1em;
+                color: white;
+                text-shadow: 2px 2px 5px black;
+            }
+
+            .opções:hover {
+                background-color: #FF5563;
+                border-color: #FF5563;
+                cursor: pointer;
+            }
+
+            
+        #areaSorteio {
+            position: relative;
+            width: 100%;
+            margin: auto;
+        }
+
+        #sorteioNumeros {
+            display: none;
+        }
+
+        #sorteioNomes {
+            display: none;
+        }
+
+        .campoSorteio {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            padding: 15px;
+            border-radius: 15px;
+            background-color: hsl(56, 85%, 81%);
+            border-color: hsl(56, 85%, 81%);
+            margin: auto;
+        }
+
+        #btnAdd {
+            position: absolute;
+            top: 10px;
+            right: 5px;
+            padding: 15px;
+            background-color: #fc7965;
+            border-color: #fc7965;
+            border-radius: 15px;
+            background-image: url(./img/icons8-soma-26.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #btnAdd:hover {
+            background-color: #FF5563;
+            cursor: pointer;
+        }
+
+        .botoesSortearLimpar {
+            position: relative;
+            top: 70px;
+            padding: 6px;
+            background-color: #fc7965;
+            border-color: #fc7965;
+            border-radius: 15px;
+            width: 100px;
+            color: white;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        .botoesSortearLimpar:hover {
+            background-color: #FF5563;
+            border-color: #FF5563;
+            cursor: pointer;
+        }
+
+        .exibeResultado {
+            top: 120px;
+            position: relative;
+            width: 100%;
+            height: 320%;
+            display: none;
+            padding-bottom: 50px;
+        }
+
+        li {
+            position: relative;
+            padding: 3px;
+            right: 5px;
+            list-style-image: url(./img/icons8-chevron-right-18.png)
+        }
+
+footer {
+    position: fixed;
+    top: 95%;
+    right: 10px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+    span {
+        font-weight: 700;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    p {
+        position: relative;
+        display: inline-block;
+        bottom: 5px;
+    }
+
+@media screen and (max-width: 440px) {
+    #container {
+        width: 90%;
+        top: 5%;
+    }
+
+    .exibeResultado {
+        top: 130px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    #container{
+        padding-bottom: 25px;
+    }
+}
+
+@media screen and (min-width: 770px) {
+
+    #container{
+        height: 45%;
+    }
+
+    h1{
+        padding: 25px;
+    }
+}
+
+
