@@ -47,7 +47,6 @@
                 padding: 15px 10px;
                 border-radius: 15px;
                 background-color: #fc7965;
-                
                 color: white;
                 text-shadow: 2px 2px 5px black;
             }
@@ -170,6 +169,25 @@ footer {
     h3{
         color: #fcf598;
         text-shadow: 2px 2px 5px black;
+    }
+
+    @media screen and (max-width: 290px){
+        h1{
+           font-size: 1.8em;
+        }
+        .opções{ 
+            width: 50vw;
+        }
+        footer {
+            top: 92%;
+        }
+    }
+
+    @media screen and (max-width: 450px){
+        #container{
+            width: 90%;
+        }
+
     }
 
     @media screen and (min-width: 768px){
