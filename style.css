@@ -33,7 +33,7 @@
             margin: auto;
         }
 
-        #areaOpções {
+        #area-opcoes {
             width: 90%;
             margin: auto;
             padding: 15px 0;
@@ -41,7 +41,7 @@
 
         }
 
-            .opções {
+            .opcoes {
                 border-color: #fc7965;
                 margin: 15px;
                 padding: 15px 10px;
@@ -51,28 +51,28 @@
                 text-shadow: 2px 2px 5px black;
             }
 
-            .opções:hover {
+            .opcoes:hover {
                 background-color: #FF5563;
                 border-color: #FF5563;
                 cursor: pointer;
             }
 
             
-        #areaSorteio {
+        #area-sorteio {
             position: relative;
             width: 100%;
             margin: auto;
         }
 
-        #sorteioNumeros {
+        #sorteio-numeros {
             display: none;
         }
 
-        #sorteioNomes {
+        #sorteio-nomes {
             display: none;
         }
 
-        .campoSorteio {
+        .campo-sorteio {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
@@ -84,7 +84,7 @@
             margin: auto;
         }
 
-        #btnAdd {
+        #btn-add {
             position: absolute;
             top: 10px;
             right: 5px;
@@ -97,12 +97,12 @@
             background-position: center;
         }
 
-        #btnAdd:hover {
+        #btn-add:hover {
             background-color: #FF5563;
             cursor: pointer;
         }
 
-        .botoesSortearLimpar {
+        .botoes-sortear-limpar {
             position: relative;
             top: 70px;
             padding: 6px;
@@ -114,13 +114,13 @@
             text-shadow: 2px 2px 5px black;
         }
 
-        .botoesSortearLimpar:hover {
+        .botoes-sortear-limpar:hover {
             background-color: #FF5563;
             border-color: #FF5563;
             cursor: pointer;
         }
 
-        .exibeResultado {
+        .exibe-resultado {
             position: relative;
             width: 65vw;
             height: 320%;
@@ -176,13 +176,13 @@ footer {
         h1{
            font-size: 1.8em;
         }
-        .opções{ 
+        .opcoes{ 
             width: 50vw;
         }
         footer {
             top: 92%;
         }
-        .exibeResultado {
+        .exibe-resultado {
             width: 75vw;
         }
     }
@@ -192,7 +192,7 @@ footer {
             width: 90%;
         }
 
-        .exibeResultado {
+        .exibe-resultado {
             width: 80vw;
         }
 
@@ -203,7 +203,7 @@ footer {
             height: 55%;
         }
 
-        .exibeResultado {
+        .exibe-resultado {
             width: 66vw;
         }
 
@@ -211,7 +211,7 @@ footer {
 
     @media screen and (min-width: 1000px){
 
-        .exibeResultado {
+        .exibe-resultado {
             width: 67vw;
         }
 
