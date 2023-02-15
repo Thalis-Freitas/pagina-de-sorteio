@@ -1,93 +1,74 @@
-/* função que será executada quando o usuário escolher a opção de sorteio com números, vai exibir na tela o campo de sorteio com números e esconder o campo de sorteio com nomes utilizando o display none*/
+let numbersDrawArea = document.getElementById('numbers-draw-area')
+let namesDrawArea = document.getElementById('names-draw-area')
+let selectNumbersOption = document.getElementById('select-numbers-option')
+let selectNamesOption = document.getElementById('select-names-option')
 
-function opNumeros() {
-    let sorteioNumeros = document.getElementById("sorteio-numeros")
-    let sorteioNomes = document.getElementById("sorteio-nomes")
-    let btnopNumeros = document.getElementById("op-numeros")
-    let btnopNomes = document.getElementById("op-nomes")
+selectNumbersOption.addEventListener('click', () => {
+    numbersDrawArea.style.display = 'inline-block'
+    namesDrawArea.style.display = 'none'
+    selectNumbersOption.style.display = 'none'
+    selectNamesOption.style.display = 'inline-block'
+})
 
-    sorteioNumeros.style.display = "inline-block"
-    sorteioNomes.style.display = "none"
-    btnopNumeros.style.display = "none"
-    btnopNomes.style.display = "inline-block"
+selectNamesOption.addEventListener('click', () => {
+    numbersDrawArea.style.display = 'none'
+    namesDrawArea.style.display = 'inline-block'
+    selectNumbersOption.style.display = 'inline-block'
+    selectNamesOption.style.display = 'none'
+})
 
-}
+let numbersRaffleButton = document.getElementById('numbers-raffle-button')
+let displayResultsOfNumbers = document.getElementById('display-results-of-numbers')
+numbersRaffleButton.addEventListener('click', () => {
+    let numbersForDraw = document.getElementById('chosen-numbers').value
+    if (numbersForDraw <= 0) {
+        alert('Por favor insira um número positivo antes de iniciar o sorteio')
+    }else {
+        let result = Math.ceil(Math.random() * numbersForDraw)
+        displayResultsOfNumbers.style.display = 'inline-block'
+        displayResultsOfNumbers.innerHTML += '<li>' + result + '</li>'
+    }
+})
 
-/* função que será executada quando o usuário escolher a opção de sorteio com nomes, vai exibir na tela o campo de sorteio com nomes e esconder o campo de sorteio com numeros utilizando o display none*/
+let removeNumbers = document.getElementById('remove-numbers')
+removeNumbers.addEventListener('click', () => {
+    let numbersForDraw = document.getElementById('chosen-numbers')
+    displayResultsOfNumbers.innerHTML = ''
+    numbersForDraw.value = ''
+    displayResultsOfNumbers.style.display = 'none'
+})
 
-function opNomes() {
-    let sorteioNumeros = document.getElementById("sorteio-numeros")
-    let sorteioNomes = document.getElementById("sorteio-nomes")
-    let btnopNumeros = document.getElementById("op-numeros")
-    let btnopNomes = document.getElementById("op-nomes")
-
-    sorteioNumeros.style.display = "none"
-    sorteioNomes.style.display = "inline-block"
-    btnopNumeros.style.display = "inline-block"
-    btnopNomes.style.display = "none"
-}
-
-/* função que irá sortear um número de acordo com o numero máximo enviado pelo usuário no input */
-function sortearNumeros() {
-
-    let numerosParaSorteio = document.getElementById("numeros-para-sorteio").value
-    let exibeResultadoNumeros = document.getElementById("exibe-resultado-numeros")
-    if (numerosParaSorteio == 0) {
-        alert("Escolha um número máximo para iniciar o sorteio")
+let insertedNames = document.getElementById('inserted-names')
+let addName = document.getElementById('add-name')
+const names = []
+addName.addEventListener('click', () => {
+    if (insertedNames.value.trim() == '') {
+        alert('Por favor preencha o campo e depois clique no botão "+" para adicionar um nome ao sorteio')
     }
     else {
-        let numeroSorteado = Math.ceil(Math.random() * numerosParaSorteio)
-        exibeResultadoNumeros.style.display = "inline-block"
-        exibeResultadoNumeros.innerHTML += "<li>" + numeroSorteado + "</li>"
+        names.push(insertedNames.value.trim())
+        insertedNames.value = ''
     }
-}
+})
 
-function limparNumeros() {
-    let numerosParaSorteio = document.getElementById("numeros-para-sorteio")
-
-    let exibeResultadoNumeros = document.getElementById("exibe-resultado-numeros")
-
-    exibeResultadoNumeros.innerHTML = ""
-    numerosParaSorteio.value = ""
-    exibeResultadoNumeros.style.display = "none"
-}
-/*Área do sorteio com nomes, a constante NOMES_PARA_SORTEIO foi atribuída a um array vazio que irá receber os nomes inlcluídos pelo usuário através do input utilizando o método push*/
-
-var nomesDosParticipantes = document.getElementById("nomes-para-sorteio")
-const NOMES_PARA_SORTEIO = []
-
-function adicionarNome() {
-    if (nomesDosParticipantes.value == "") {
-        alert("Digite um nome para ser adicionado ao sorteio")
+let namesRaffleButton = document.getElementById('names-raffle-button')
+let displayResultsOfNames = document.getElementById('display-results-of-names')
+namesRaffleButton.addEventListener('click', () => {
+    let numberOfNames = names.length
+    if (numberOfNames == 0) {
+        alert('Adicione os nomes para iniciar o sorteio')
     }
     else {
-        NOMES_PARA_SORTEIO.push(nomesDosParticipantes.value)
-        nomesDosParticipantes.value = ""
+        let resultIndex = Math.floor(Math.random() * numberOfNames)
+        displayResultsOfNames.style.display = 'inline-block'
+        displayResultsOfNames.innerHTML += '<li>' + names[resultIndex] + '</li>'
     }
-}
+})
 
-/*Para fazer o sorteio dos nomes foi utilizado como número o tamanho do array NOMES_PARA_SORTEIO, para que o número sorteado não seja maior que o tamanho do array foi utilizado o Math.floor para arredondar para o valor inferior e por fim o resultado foi passado como índice do array para ser exibido na tela */
-
-function sortearNomes() {
-
-    let numeroDeParticipantes = NOMES_PARA_SORTEIO.length
-    if (numeroDeParticipantes == 0) {
-        alert("Adicione os nomes para iniciar o sorteio")
-    }
-    else {
-        let indiceSorteado = Math.floor(Math.random() * numeroDeParticipantes)
-        let exibeResultadoNomes = document.getElementById("exibe-resultado-nomes")
-        exibeResultadoNomes.style.display = "inline-block"
-        exibeResultadoNomes.innerHTML += "<li>" + NOMES_PARA_SORTEIO[indiceSorteado] + "</li>"
-
-    }
-}
-
-function limparNomes() {
-    let exibeResultadoNomes = document.getElementById("exibe-resultado-nomes")
-
-    exibeResultadoNomes.innerHTML = ""
-    nomesDosParticipantes.value = ""
-    exibeResultadoNomes.style.display = "none"
-    NOMES_PARA_SORTEIO.length = 0
-} 
+let removeNames = document.getElementById('remove-names')
+removeNames.addEventListener('click', () => {
+    displayResultsOfNames.innerHTML = ''
+    insertedNames.value = ''
+    displayResultsOfNames.style.display = 'none'
+    names.length = 0
+})

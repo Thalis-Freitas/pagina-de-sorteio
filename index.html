@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,37 +16,39 @@
 <body>
     <div id="container">
         <h1>Escolha uma opção de sorteio</h1>
-
-        <div id="area-opcoes">    
-            <button class="opcoes" id="op-numeros" onclick="opNumeros()">Sorteio com números</button>
-            <button class="opcoes" id="op-nomes" onclick="opNomes()">Sorteio com nomes</button>
+        <div id="options">    
+            <button class="option" id="select-numbers-option">Sorteio com números</button>
+            <button class="option" id="select-names-option">Sorteio com nomes</button>
         </div>
-        <div id="area-sorteio">
-            <div id="sorteio-numeros">
-                <input class="campo-sorteio" type="number" id="numeros-para-sorteio"
-                    placeholder="Insira o número máximo... ">
-                <button class="botoes-sortear-limpar" id="btn-sortear-numeros" onclick="sortearNumeros()">Sortear</button>
-                <button class="botoes-sortear-limpar" id="btn-limpar" onclick="limparNumeros()"> Limpar</button>
-                <div class="exibe-resultado" id="exibe-resultado-numeros"> <h3>Números sorteados: </h3> </div>
+        <main id="raffle-area">
+            <div id="numbers-draw-area">
+                <input class="field" type="number" id="chosen-numbers" placeholder="Insira o número máximo... ">
+                <button class="buttons" id="numbers-raffle-button">Sortear</button>
+                <button class="buttons" id="remove-numbers"> Limpar</button>
+                <div class="display-result" id="display-results-of-numbers">
+                    <h3>Números sorteados:</h3>
+                </div>
             </div>
 
-            <div id="sorteio-nomes">
-                <input class="campo-sorteio" type="text" id="nomes-para-sorteio" placeholder="Digite os nomes...">
-                <button id="btn-add" onclick="adicionarNome()"></button>
-                <button class="botoes-sortear-limpar" id="btn-sortear-nomes" onclick="sortearNomes()">Sortear</button>
-                <button class="botoes-sortear-limpar" id="btn-limpar-nomes" onclick="limparNomes()"> Limpar</button>
-                <div class="exibe-resultado" id="exibe-resultado-nomes"> <h3>Nomes sorteados:</h3></div>
+            <div id="names-draw-area">
+                <input class="field" type="text" id="inserted-names" placeholder="Digite os nomes...">
+                <button id="add-name"></button>
+                <button class="buttons" id="names-raffle-button">Sortear</button>
+                <button class="buttons" id="remove-names"> Limpar</button>
+                <div class="display-result" id="display-results-of-names">
+                    <h3>Nomes sorteados:</h3>
+                </div>
             </div>
-        </div>
+        </main>
     </div>
-
-    <footer><a href="https://github.com/Thalis-Freitas" target="_blank"><img src="./img/icons8-github-24.png" alt="">
-            <p> Desenvolvido por: <span>Thalis Freitas </span>
-        </a></p>
+    <footer>
+        <a href="https://github.com/Thalis-Freitas" target="_blank">
+            <img src="./img/icons8-github-24.png" alt="logo-github">
+            <p> Desenvolvido por: 
+                <span>Thalis Freitas </span>
+            </p>
+        </a>
     </footer>
-
     <script src="./script.js"></script>
-
 </body>
-
 </html>

@@ -1,219 +1,218 @@
-    * {
-        margin: 0;
-        padding: 0;
-        font-family: 'Poppins', sans-serif;
-        box-sizing: border-box;
-    }
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
 
-    body {
-        position: relative;
-        height: 100vh;
-        width: 100vw;
-        background-image: linear-gradient(to right, #f1e96b, #FF5563);
-        overflow: hidden auto;
-    }
+body {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to right, #f1e96b, #FF5563);
+    overflow: hidden auto;
+}
 
-    #container {
-        position: absolute;
-        display: inline-block;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 70%;
-        top: 3%;
-        padding: 20px;
-        border-radius: 15px;
-        bottom: 30%;
-    }
+#container {
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    top: 3%;
+    padding: 20px;
+    border-radius: 15px;
+    bottom: 30%;
+}
 
-        h1 {
-            padding: 5px;
-            text-align: center;
-            color: #fcf598;
-            text-shadow: 3px 3px 6px black;
-            font-weight: 800;
-            margin: auto;
-        }
+h1 {
+    padding: 5px;
+    padding-top: 50px;
+    text-align: center;
+    color: #fcf598;
+    text-shadow: 3px 3px 6px black;
+    font-weight: 800;
+    margin: auto;
+}
 
-        #area-opcoes {
-            width: 90%;
-            margin: auto;
-            padding: 15px 0;
-            text-align: center;
+#options {
+    width: 90%;
+    margin: auto;
+    padding: 15px 0;
+    text-align: center;
+}
 
-        }
-
-            .opcoes {
-                border-color: #fc7965;
-                margin: 15px;
-                padding: 15px 10px;
-                border-radius: 15px;
-                background-color: #fc7965;
-                color: white;
-                text-shadow: 2px 2px 5px black;
-            }
-
-            .opcoes:hover {
-                background-color: #FF5563;
-                border-color: #FF5563;
-                cursor: pointer;
-            }
-
-            
-        #area-sorteio {
-            position: relative;
-            width: 100%;
-            margin: auto;
-        }
-
-        #sorteio-numeros {
-            display: none;
-        }
-
-        #sorteio-nomes {
-            display: none;
-        }
-
-        .campo-sorteio {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            padding: 15px;
-            border-radius: 15px;
-            background-color: hsl(56, 85%, 81%);
-            border-color: hsl(56, 85%, 81%);
-            margin: auto;
-        }
-
-        #btn-add {
-            position: absolute;
-            top: 10px;
-            right: 5px;
-            padding: 15px;
-            background-color: #fc7965;
-            border-color: #fc7965;
-            border-radius: 15px;
-            background-image: url(./img/icons8-soma-26.png);
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        #btn-add:hover {
-            background-color: #FF5563;
-            cursor: pointer;
-        }
-
-        .botoes-sortear-limpar {
-            position: relative;
-            top: 70px;
-            padding: 6px;
-            background-color: #fc7965;
-            border-color: #fc7965;
-            border-radius: 15px;
-            width: 100px;
-            color: white;
-            text-shadow: 2px 2px 5px black;
-        }
-
-        .botoes-sortear-limpar:hover {
-            background-color: #FF5563;
-            border-color: #FF5563;
-            cursor: pointer;
-        }
-
-        .exibe-resultado {
-            position: relative;
-            width: 65vw;
-            height: 320%;
-            display: none;
-            margin: 120px 0 15px 0;
-            padding: 0px 15px 20px 15px;
-            border: 2px solid #f1e96b;
-            border-radius: 15px;
-            bottom: 30px;
-        }
-
-        li {
-            word-wrap: break-word;
-            font-weight: 600;
-            text-shadow: 2px 2px 5px #FF5563;
-            font-size: 1.3em;
-            color: black;
-            position: relative;
-            padding: 3px;
-            right: 5px;
-            list-style-image: url(./img/icons8-chevron-right-18.png)
-        }
-
-footer {
-    position: fixed;
-    top: 95%;
-    right: 10px;
+.option {
+    border-color: #fc7965;
+    margin: 15px;
+    padding: 15px 10px;
+    border-radius: 15px;
+    background: #fc7965;
     color: white;
     text-shadow: 2px 2px 5px black;
 }
 
-    span {
-        font-weight: 700;
+.option:hover {
+    background: #FF5563;
+    border-color: #FF5563;
+    cursor: pointer;
+}
+
+#raffle-area {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+#numbers-draw-area {
+    display: none;
+}
+
+#names-draw-area {
+    display: none;
+}
+
+.field {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    background: hsl(56, 85%, 81%);
+    border-color: hsl(56, 85%, 81%);
+    margin: auto;
+}
+
+#add-name {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    padding: 15px;
+    background: #fc7965;
+    border-color: #fc7965;
+    border-radius: 15px;
+    background-image: url(./img/icons8-soma-26.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#add-name:hover {
+    background: #FF5563;
+    cursor: pointer;
+}
+
+.buttons {
+    position: relative;
+    top: 70px;
+    padding: 6px;
+    background: #fc7965;
+    border-color: #fc7965;
+    border-radius: 15px;
+    width: 100px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.buttons:hover {
+    background: #FF5563;
+    border-color: #FF5563;
+    cursor: pointer;
+}
+
+.display-result {
+    position: relative;
+    width: 65vw;
+    height: 320%;
+    display: none;
+    margin: 120px 0 15px 0;
+    padding: 0px 15px 20px 15px;
+    border: 2px solid #f1e96b;
+    border-radius: 15px;
+    bottom: 30px;
+}
+
+li {
+    word-wrap: break-word;
+    font-weight: 600;
+    text-shadow: 2px 2px 5px #FF5563;
+    font-size: 1.3em;
+    color: black;
+    position: relative;
+    padding: 3px;
+    right: 5px;
+    list-style-image: url(./img/icons8-chevron-right-18.png)
+}
+
+footer {
+    position: fixed;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    background: rgba(252, 245, 152, 0.7);
+    border-radius: 20px;
+    padding: 5px 10px;
+    right: 10px;
+    top: 6px;
+}
+
+span {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+p {
+    position: relative;
+    display: inline-block;
+    bottom: 5px;
+}
+
+h3{
+    color: #fcf598;
+    text-shadow: 2px 2px 5px black;
+}
+
+@media screen and (max-width: 290px){
+    h1{
+        font-size: 1.8em;
+        padding-top: 70px;
     }
-
-    a {
-        text-decoration: none;
-        color: white;
+    .option{ 
+        width: 50vw;
     }
-
-    p {
-        position: relative;
-        display: inline-block;
-        bottom: 5px;
+    .display-result {
+        width: 75vw;
     }
+}
 
-    h3{
-        color: #fcf598;
-        text-shadow: 2px 2px 5px black;
+@media screen and (max-width: 450px){
+    #container{
+        width: 90%;
     }
-
-    @media screen and (max-width: 290px){
-        h1{
-           font-size: 1.8em;
-        }
-        .opcoes{ 
-            width: 50vw;
-        }
-        footer {
-            top: 92%;
-        }
-        .exibe-resultado {
-            width: 75vw;
-        }
+    .display-result {
+        width: 80vw;
     }
-
-    @media screen and (max-width: 450px){
-        #container{
-            width: 90%;
-        }
-
-        .exibe-resultado {
-            width: 80vw;
-        }
-
+    footer{
+        min-width: 310px;
+        left: 50%;
+        transform: translateX(-50%);
     }
+}
 
-    @media screen and (min-width: 768px){
-        #container{
-            height: 55%;
-        }
-
-        .exibe-resultado {
-            width: 66vw;
-        }
-
+@media screen and (min-width: 768px){
+    #container{
+        height: 55%;
     }
-
-    @media screen and (min-width: 1000px){
-
-        .exibe-resultado {
-            width: 67vw;
-        }
-
+    .display-result {
+        width: 66vw;
     }
+}
+
+@media screen and (min-width: 1000px){
+    .display-result {
+        width: 67vw;
+    }
+}
