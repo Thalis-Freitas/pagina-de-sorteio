@@ -89,16 +89,13 @@ h1 {
     top: 10px;
     right: 5px;
     padding: 15px;
-    background: #fc7965;
     border-color: #fc7965;
     border-radius: 15px;
-    background-image: url(./img/icons8-soma-26.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background: #fc7965 url(./img/icons8-soma-26.png) no-repeat center;
 }
 
 #add-name:hover {
-    background: #FF5563;
+    background-color: #FF5563;
     cursor: pointer;
 }
 
